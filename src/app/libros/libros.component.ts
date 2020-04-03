@@ -34,11 +34,10 @@ export class LibrosComponent implements OnInit {
   }
 
   cargarLista(){
-    this.http.get('assets/lista-libro.json').subscribe(
+    this.http.get('assets/lista-libros.json').subscribe(
       (respuesta: Response) => {this.libros = respuesta;  this.loading = false;},
       (respuesta: Response) => {this.errorHttps= true; this.loading = false;}
     )
-   
   }
 
   agregarLibro(_libroVisto){
