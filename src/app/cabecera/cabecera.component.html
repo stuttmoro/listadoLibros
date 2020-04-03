@@ -1,0 +1,13 @@
+<!--<p>Inicio / Libros / Sobre nosotros</p>-->
+<ul>
+    <li><a [routerLink]="['/listado-libros']" routerLinkActive="myclass">Listado libros</a></li>
+    <li><a [routerLink]="['/']" routerLinkActive="myclass">Inicio</a></li>  
+ </ul>
+
+ <h3>
+     Libros vistos
+ </h3>
+ <ul *ngIf="librosVistos.verListado()">
+     <li *ngFor="let libro of librosVistos.verListado()">{{libro.titulo}}</li>
+ </ul>
+ 

@@ -1,0 +1,7 @@
+<div *ngIf="loading" class="loader"></div>
+<ul>
+    <li *ngFor="let libro of libros">
+      <a (click)="agregarLibro(libro)" [routerLink]="['/informacion', libro.id]">{{libro.titulo}}</a>
+    </li>
+</ul> 
+<p *ngIf="errorHttps">Lo sentimos pero ha habido un error con el JSON</p>
