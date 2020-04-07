@@ -11,11 +11,13 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { LibroclickedService } from './libroclicked.service';
+import { RendererdemoComponent } from './rendererdemo/rendererdemo.component';
 
 const rutas: Routes = [
   {path: 'listado-libros', component: LibrosComponent },
   {path: 'informacion/:libroId', component: InformacionComponent },
   {path: 'informacion', redirectTo: '/' },
+  {path: 'sobre-nosotros', component: SobreNosotrosComponent },
 
   {path: '404', component: NotFoundComponent },
   {path: '', component: InicioComponent, pathMatch: 'full' },
@@ -30,7 +32,8 @@ const rutas: Routes = [
     CabeceraComponent,
     InicioComponent,
     NotFoundComponent,
-    InformacionComponent
+    InformacionComponent,
+    RendererdemoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,16 @@
 <div *ngIf="loading" class="loader"></div>
 <p *ngIf="errorHttps">Lo sentimos pero ha habido un error con el JSON</p>
-<ul>
+<!--<ul>
     <li *ngFor="let libro of libros">
       <a (click)="agregarLibro(libro)" [routerLink]="['/informacion', libro.id]">{{libro.titulo}}</a>
     </li>
-</ul> 
+</ul> -->
+<div class="card librostarjet" style="width: 18rem;" *ngFor="let libro of libros">
+  <img src="{{libro.imagen}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{libro.titulo}}</h5>
+    <p class="card-text">{{libro.autor}}</p>
+    <a (click)="agregarLibro(libro)" [routerLink]="['/informacion', libro.id]"  class="btn btn-primary">Ver informacion</a>
+  </div>
+
+</div>

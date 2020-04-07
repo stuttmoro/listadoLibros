@@ -1,0 +1,13 @@
+li{
+    transition: 0.3s all;
+}
+
+.miClase{
+    background: #00D9FF;
+    padding: 10px;
+    color: white;
+}
+
+li[data-select="true"]:not(.miClase){
+    background: #beaad0;
+}
